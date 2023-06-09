@@ -1,0 +1,16 @@
+{
+    "config": {
+        "connector.class": "com.github.griddb.kafka.connect.GriddbSinkConnector",
+        "name": "griddb-kafka-source",
+        "cluster.name": "myCluster",
+        "user": "admin",
+        "password": "admin",
+        "poll.interval.ms": "5000",
+        "containers": "device7,device8,device9,device10",
+        "mode": "timestamp",
+        "timestamp.column.name": "ts",
+	"topics": "device" 
+    },
+    "name": "griddb-kafka-source"
+
+}

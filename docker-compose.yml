@@ -19,13 +19,45 @@ services:
     environment:
       NOTIFICATION_MEMBER: 1
       GRIDDB_CLUSTER_NAME: myCluster
-    volumes:
-      - 'griddb:/var/lib/gridstore/data'
+#    volumes:
+#      - 'griddb:/var/lib/gridstore/data'
+
+
+  jupyter:
+    build:
+      context: jupyter 
+      dockerfile: Dockerfile
+    container_name: jupyter
+    ports:
+      - '8888:8888'
+
+  bill-job:
+    build:
+      context: bill-job
+      dockerfile: Dockerfile
+    profiles:
+      - donotstart
 
   gateway-sim:
     build:
       context: gateway-sim
       dockerfile: Dockerfile
+    profiles:
+      - donotstart
+
+  data-viz:
+    build:
+      context: data-viz
+      dockerfile: Dockerfile
+    container_name: data-viz
+    ports:
+      - "2828:2828"
+    restart: unless-stopped
+    depends_on: 
+      - griddb-server
+    links: 
+      - griddb-server
+
   zookeeper:
     image: 'confluentinc/cp-zookeeper:7.3.0'
     container_name: zookeeper
@@ -97,6 +129,7 @@ services:
       - zookeeper
       - broker
       - kafka-schema-registry
+      - griddb-server
     command:
       - bash
       - '-c'

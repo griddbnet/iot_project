@@ -6,6 +6,9 @@ import datetime
 import time as t
 import logging
 import random
+import threading
+
+NUM_DEVICES=10
 
 
 logging.basicConfig(format='%(asctime)s %(message)s',
@@ -16,58 +19,72 @@ logging.basicConfig(format='%(asctime)s %(message)s',
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-####################
 p=KafkaProducer(bootstrap_servers=['broker:9092'])
 print('Kafka Producer has been initiated...')
-#####################
-def receipt(err,msg):
-    if err is not None:
-        print('Error: {}'.format(err))
-    else:
-        message = 'Produced message on topic {} with value of {}\n'.format(msg.topic(), msg.value().decode('utf-8'))
-        logger.info(message)
-        print(message)
-        
-#####################
-def main():
-    for i in range(10):
-        time = datetime.datetime.now()
+
+def register_device(meterid):
+     data= {
+        "payload": 
+        {
+            'meterid': meterid,
+            'billdate': random.randint(1, 28) 
+        },
+        "schema": 
+        {
+            "fields": [ 
+                { "field": "meterid", "optional": False, "type": "int32" },
+                { "field": "billdate", "optional": False, "type": "int32" } 
+            ], 
+            "name": "device", "optional": False, "type": "struct" 
+        }    
+     }
+     m=json.dumps(data, indent=4, sort_keys=True, default=str)
+     print("Registering",m)
+     p.send("meters", m.encode('utf-8'))
+ 
+    
+def produce(meterid, usagemodel=None):
+    time = datetime.datetime.now()-datetime.timedelta(days=100)
+    register_device(meterid)
+
+    base_temp = random.uniform(-10,40)
+    base_kwh = random.uniform(0,2)
+    while True:
         now = time.strftime('%Y-%m-%d %H:%M:%S.%f')
         data= {
             "payload": 
             {
-                'ts': now,
-                'sensor': 'device10',
-                'co': random.uniform(0, 1),
-                'humidity': random.uniform(1, 100),
-                'light': random.choice([True, False]),
-                'lpg': random.uniform(0, 1),
-                'motion': random.choice([True, False]), 
-                'smoke': random.uniform(0, 1),
-                'temp': random.uniform(1, 33) 
+                'timestamp': now,
+                'kwh': base_kwh+random.uniform(-.2, 2),
+                'temp': base_temp+random.uniform(-5, 5) 
             },
             "schema": 
             {
                 "fields": [ 
-                    { "field": "ts", "optional": False, "type": "string" },
-                    { "field": "sensor", "optional": False, "type": "string" }, 
-                    { "field": "co", "optional": False, "type": "double" }, 
-                    { "field": "humidity", "optional": False, "type": "double" }, 
-                    { "field": "light", "optional": False, "type": "boolean" }, 
-                    { "field": "lpg", "optional": False, "type": "double" }, 
-                    { "field": "motion", "optional": False, "type": "boolean" }, 
-                    { "field": "smoke", "optional": False, "type": "double" }, 
+                    { "field": "timestamp", "optional": False, "type": "string" },
+                    { "field": "kwh", "optional": False, "type": "double" }, 
                     { "field": "temp", "optional": False, "type": "double" } 
                 ], 
                 "name": "iot", "optional": False, "type": "struct" 
             }    
          }
-
+        time = time + datetime.timedelta(minutes=60)
+        if time > datetime.datetime.now():
+            time.sleep(3600)
 
         m=json.dumps(data, indent=4, sort_keys=True, default=str)
-        p.send('device7', m.encode('utf-8'))
-        print("sent message")
-        t.sleep(3)
-        
+        p.send("meter_"+str(meterid), m.encode('utf-8'))
+        print("meter_"+str(meterid), data['payload'])
+
+def main():
+   
+    i=0;
+    threads={}
+    while i < NUM_DEVICES: 
+        threads[i] = threading.Thread(target=produce, args=(i,))
+        threads[i].start()
+        i=i+1
+    
+
 if __name__ == '__main__':
     main()

@@ -1,0 +1,660 @@
+2023-02-08 14:15:30 Produced message on topic device7 with value of {
+    "payload": {
+        "co": 0.24142090728213206,
+        "humidity": 26.463288847023556,
+        "light": false,
+        "lpg": 0.6840986751971547,
+        "motion": false,
+        "sensor": "device10",
+        "smoke": 0.4667937658179754,
+        "temp": 11.909607465189048,
+        "ts": "2023-02-08 14:15:28.507849"
+    },
+    "schema": {
+        "fields": [
+            {
+                "field": "ts",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "sensor",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "co",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "humidity",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "light",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "lpg",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "motion",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "smoke",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "temp",
+                "optional": false,
+                "type": "double"
+            }
+        ],
+        "name": "iot",
+        "optional": false,
+        "type": "struct"
+    }
+}
+
+2023-02-08 14:15:34 Produced message on topic device7 with value of {
+    "payload": {
+        "co": 0.4416502142622455,
+        "humidity": 72.2169067518753,
+        "light": false,
+        "lpg": 0.2057121369773912,
+        "motion": false,
+        "sensor": "device10",
+        "smoke": 0.5233987943425812,
+        "temp": 26.2301120734583,
+        "ts": "2023-02-08 14:15:33.516253"
+    },
+    "schema": {
+        "fields": [
+            {
+                "field": "ts",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "sensor",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "co",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "humidity",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "light",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "lpg",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "motion",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "smoke",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "temp",
+                "optional": false,
+                "type": "double"
+            }
+        ],
+        "name": "iot",
+        "optional": false,
+        "type": "struct"
+    }
+}
+
+2023-02-08 14:15:38 Produced message on topic device7 with value of {
+    "payload": {
+        "co": 0.4154333275213289,
+        "humidity": 54.20228354691629,
+        "light": true,
+        "lpg": 0.3576370657291036,
+        "motion": true,
+        "sensor": "device10",
+        "smoke": 0.6218522473006839,
+        "temp": 32.50679715546833,
+        "ts": "2023-02-08 14:15:37.522254"
+    },
+    "schema": {
+        "fields": [
+            {
+                "field": "ts",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "sensor",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "co",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "humidity",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "light",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "lpg",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "motion",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "smoke",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "temp",
+                "optional": false,
+                "type": "double"
+            }
+        ],
+        "name": "iot",
+        "optional": false,
+        "type": "struct"
+    }
+}
+
+2023-02-08 14:15:42 Produced message on topic device7 with value of {
+    "payload": {
+        "co": 0.9169619080803469,
+        "humidity": 18.172818380249048,
+        "light": true,
+        "lpg": 0.38740329378937655,
+        "motion": false,
+        "sensor": "device10",
+        "smoke": 0.6159495110305152,
+        "temp": 18.500374499074866,
+        "ts": "2023-02-08 14:15:41.526761"
+    },
+    "schema": {
+        "fields": [
+            {
+                "field": "ts",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "sensor",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "co",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "humidity",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "light",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "lpg",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "motion",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "smoke",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "temp",
+                "optional": false,
+                "type": "double"
+            }
+        ],
+        "name": "iot",
+        "optional": false,
+        "type": "struct"
+    }
+}
+
+2023-02-08 14:15:46 Produced message on topic device7 with value of {
+    "payload": {
+        "co": 0.8497491382558058,
+        "humidity": 83.70400086304221,
+        "light": false,
+        "lpg": 0.06929134489842881,
+        "motion": false,
+        "sensor": "device10",
+        "smoke": 0.5428334072360511,
+        "temp": 22.492827819694284,
+        "ts": "2023-02-08 14:15:45.534717"
+    },
+    "schema": {
+        "fields": [
+            {
+                "field": "ts",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "sensor",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "co",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "humidity",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "light",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "lpg",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "motion",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "smoke",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "temp",
+                "optional": false,
+                "type": "double"
+            }
+        ],
+        "name": "iot",
+        "optional": false,
+        "type": "struct"
+    }
+}
+
+2023-02-08 14:15:50 Produced message on topic device7 with value of {
+    "payload": {
+        "co": 0.9095562601536771,
+        "humidity": 78.29856829659077,
+        "light": true,
+        "lpg": 0.7225558088702723,
+        "motion": false,
+        "sensor": "device10",
+        "smoke": 0.2312305467214527,
+        "temp": 32.5120582329916,
+        "ts": "2023-02-08 14:15:49.540768"
+    },
+    "schema": {
+        "fields": [
+            {
+                "field": "ts",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "sensor",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "co",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "humidity",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "light",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "lpg",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "motion",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "smoke",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "temp",
+                "optional": false,
+                "type": "double"
+            }
+        ],
+        "name": "iot",
+        "optional": false,
+        "type": "struct"
+    }
+}
+
+2023-02-08 14:15:54 Produced message on topic device7 with value of {
+    "payload": {
+        "co": 0.29083361628576276,
+        "humidity": 53.86686480966787,
+        "light": false,
+        "lpg": 0.9921724154755254,
+        "motion": true,
+        "sensor": "device10",
+        "smoke": 0.18384006378232998,
+        "temp": 28.952886884352914,
+        "ts": "2023-02-08 14:15:53.547343"
+    },
+    "schema": {
+        "fields": [
+            {
+                "field": "ts",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "sensor",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "co",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "humidity",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "light",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "lpg",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "motion",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "smoke",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "temp",
+                "optional": false,
+                "type": "double"
+            }
+        ],
+        "name": "iot",
+        "optional": false,
+        "type": "struct"
+    }
+}
+
+2023-02-08 14:15:58 Produced message on topic device7 with value of {
+    "payload": {
+        "co": 0.0017765153457239835,
+        "humidity": 21.721817027882956,
+        "light": true,
+        "lpg": 0.7995049856290832,
+        "motion": false,
+        "sensor": "device10",
+        "smoke": 0.27989604387017286,
+        "temp": 7.209907337931956,
+        "ts": "2023-02-08 14:15:57.553245"
+    },
+    "schema": {
+        "fields": [
+            {
+                "field": "ts",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "sensor",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "co",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "humidity",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "light",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "lpg",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "motion",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "smoke",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "temp",
+                "optional": false,
+                "type": "double"
+            }
+        ],
+        "name": "iot",
+        "optional": false,
+        "type": "struct"
+    }
+}
+
+2023-02-08 14:16:02 Produced message on topic device7 with value of {
+    "payload": {
+        "co": 0.7061657466671245,
+        "humidity": 91.63509102780021,
+        "light": false,
+        "lpg": 0.09496371277617333,
+        "motion": false,
+        "sensor": "device10",
+        "smoke": 0.7013132093501111,
+        "temp": 29.650912016164895,
+        "ts": "2023-02-08 14:16:01.558762"
+    },
+    "schema": {
+        "fields": [
+            {
+                "field": "ts",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "sensor",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "co",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "humidity",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "light",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "lpg",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "motion",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "smoke",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "temp",
+                "optional": false,
+                "type": "double"
+            }
+        ],
+        "name": "iot",
+        "optional": false,
+        "type": "struct"
+    }
+}
+
+2023-02-08 14:16:06 Produced message on topic device7 with value of {
+    "payload": {
+        "co": 0.07190748251275858,
+        "humidity": 87.16355868614025,
+        "light": false,
+        "lpg": 0.42095970031349783,
+        "motion": true,
+        "sensor": "device10",
+        "smoke": 0.9152488139967011,
+        "temp": 32.368773736081906,
+        "ts": "2023-02-08 14:16:05.564620"
+    },
+    "schema": {
+        "fields": [
+            {
+                "field": "ts",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "sensor",
+                "optional": false,
+                "type": "string"
+            },
+            {
+                "field": "co",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "humidity",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "light",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "lpg",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "motion",
+                "optional": false,
+                "type": "boolean"
+            },
+            {
+                "field": "smoke",
+                "optional": false,
+                "type": "double"
+            },
+            {
+                "field": "temp",
+                "optional": false,
+                "type": "double"
+            }
+        ],
+        "name": "iot",
+        "optional": false,
+        "type": "struct"
+    }
+}
+

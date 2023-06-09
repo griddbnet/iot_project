@@ -9,13 +9,14 @@ curl -s \
         	"connector.class": "com.github.griddb.kafka.connect.GriddbSinkConnector",
         	"name": "griddb-kafka-sink",
         	"cluster.name": "myCluster",
+            "notification.member": "griddb-server:10001",
         	"user": "admin",
         	"password": "admin",
-        	"topics": "device7,device8,device9,device10",
+        	"topics.regex": "meter.(.*)",
         	"transforms": "TimestampConverter",
         	"transforms.TimestampConverter.type": "org.apache.kafka.connect.transforms.TimestampConverter$Value",
         	"transforms.TimestampConverter.format": "yyyy-MM-dd hh:mm:ss.SSS",
-        	"transforms.TimestampConverter.field": "ts",
+        	"transforms.TimestampConverter.field": "timestamp",
         	"transforms.TimestampConverter.target.type": "Timestamp"
     	}
 }'

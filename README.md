@@ -19,12 +19,15 @@ docker exec -it broker  kafka-console-consumer --bootstrap-server broker:9092  -
 
 ## Run Kafka Producer
 
-$ python3 gateway-sim/kafka_producer.py
+Will register 10 devices and generate 100 days of data for them.
 
-## Check GridDB Server Contents
+$ docker-compose build gateway-sim
+$ docker-compose run gateway-sim 
 
-drop into griddb shell: 
 
-$ docker exec -it griddb-server gs_sh
+## Run Bill Job
 
-gs> select * from device7;
+Will generate one bill for meter_1
+
+$ docker-compose build bill-job
+$ docker-compose run bill-job
